@@ -1,5 +1,8 @@
 # ER101
 ## Hello everyone, and welcome to ER 101!
+
+![image](https://github.com/user-attachments/assets/a97bf91e-5eca-45b2-bf77-175d9c5d605e)
+
 Have you ever been amazed by how electronics actually work? Like, how are phones, laptops, or robots even possible? It’s crazy to think that something as small as moving electrons and electric fields somehow powers all the tech we use every day — from gaming and social media to automation and AI.
 
 It almost feels like magic… but it’s not. It’s science — and humans figured it out.
@@ -42,17 +45,24 @@ Here are some platforms where you can experiment and build your own circuits:
 #### 🧠 For Digital Logic Circuit Simulation
 
 - 🔗 [**CircuitVerse**](https://circuitverse.org)  
-  A beginner-friendly simulator for building and testing **digital logic circuits** — think logic gates, adders, flip-flops, counters, etc.
+  **CircuitVerse** is an online simulator designed for building and testing digital logic circuits. It’s perfect for experimenting with logic gates, flip-flops, multiplexers, and more — all in a visual, beginner-friendly environment.
+
+  ![image](https://github.com/user-attachments/assets/5833b72d-a727-44ca-935a-8a3a967e10a3)
+
 
 ---
 
 #### ⚙️ For Real-World Electronics & Arduino Simulation
 
 - 🔗 [**Wokwi**](https://wokwi.com)  
-  A powerful browser-based simulator for **Arduino**, ESP32, and more — great for real-world electronics and embedded systems.
+  Wokwi is a powerful browser-based simulator for **Arduino**, ESP32, Raspberry Pi Pico, and more. It lets you build and test embedded systems with real-world components like sensors, displays, and microcontrollers — all without any hardware. Great for prototyping, debugging, or just learning how things work.
+
+  ![image](https://github.com/user-attachments/assets/e06be3d5-63db-407d-b07f-729bff8dd87c)
 
 - 🔗 [**TinkerCAD Circuits**](https://www.tinkercad.com/circuits)  
-  Simple and intuitive tool to simulate **basic electronics and Arduino setups**. Good for quick prototyping and testing ideas.
+  **TinkerCAD** Circuits is a beginner-friendly online tool that lets you simulate basic electronics and **Arduino** projects. It’s simple, intuitive, and great for quickly testing ideas or learning how circuits work — no hardware needed
+
+  ![image](https://github.com/user-attachments/assets/eeea2e30-1f66-4ef0-9b2f-f3c193326aa8)
 
 ---
 
@@ -67,6 +77,9 @@ Why just two values? Because it makes things much more reliable. Unlike analog s
 
 ## The Language of Digital Electronics: Binary
 In digital electronics, everything comes down to 0s and 1s — they represent the low and high signals in a circuit. That’s why it’s important to understand the binary number system early on. Computers and digital devices store and handle all kinds of data — numbers, text, images — using just these two values. So, if you want to really get how digital systems work, binary is where it all begins.
+
+![image](https://github.com/user-attachments/assets/5fbae6f6-dfb4-465f-9f00-85947e1ce293)
+
 
 Here are some great resources to get you started :
 - [Number Systems and Base Conversions](https://www.geeksforgeeks.org/number-system-and-base-conversions/)  
@@ -83,6 +96,9 @@ Here are some great resources to get you started :
 - [🧠 IEEE 754 — How Do Computers Store Decimal Numbers?](https://www.geeksforgeeks.org/introduction-of-floating-point-representation/)
 
 📼 **Relevant Videos:** *Videos 25–29 in the playlist*
+
+![image](https://github.com/user-attachments/assets/80ddf543-9cf4-43f6-a25d-b07c2a3537bb)
+
 
 ---
 
@@ -106,5 +122,174 @@ Want to go a bit deeper or explore some bonus topics? These are not mandatory, b
 - **Hamming Code (Error Correction)**  
   [Hamming Codes](https://www.geeksforgeeks.org/hamming-code-in-computer-network/) Learn how data can be checked and corrected — used in memory systems, communication, and more.  
   📼 *Videos 20–24 in the playlist*
+
+![image](https://github.com/user-attachments/assets/f07b536b-bb99-4a88-b985-5565390e3e61)
+
+
+---
+
+## ⚙️ Intro to Logic Gates & Boolean Algebra
+
+Let’s start with the real basics of digital electronics **— logic gates**.
+
+Any complex operation a computer performs can be broken down into smaller logical steps. That’s exactly what Boolean algebra helps us do — describe and simplify these steps using logic.
+
+Logic gates are the physical building blocks that implement this logic. Just like atoms make up all matter, logic gates form the core of all digital processes.
+
+Understanding them is the first step to understanding how our technology really works.
+
+---
+
+### Logic Gates
+- **AND**, **OR**, and **NOT** are the basic gates — everything in digital logic builds off of these. Then we’ve got **NAND** and **NOR**, known as universal gates because you can create any other gate using just one of them. Pretty interesting, right? Let’s check them out.
+
+  [🔗 Explore Basic & Universal Gates](https://computerengineeringforbabies.com/blogs/engineering/logic-gate/)
+  
+  📼 *Videos 30–34, 49 and 51 in the playlist*
+
+![image](https://github.com/user-attachments/assets/359950fd-e7ec-461a-ba8c-f0150fbc1514)
+
+#### CMOS Logic Gates
+We also take a quick peek under the hood to see how logic gates are actually built using transistors. Understanding the physical side — how these abstract logic blocks are made real — is pretty cool and helps make sense of how digital electronics work at the lowest level.  
+
+- [CMOS Logic Gates](https://www.geeksforgeeks.org/cmos-logic-gate/)
+  
+📼 *Video 173* — How logic gates are built using complementary MOSFETs in CMOS technology.  
+
+<img src=https://github.com/user-attachments/assets/654a9485-d1d5-4ba1-8736-2198ac7ce144 width=500>
+
+
+Not familiar with how a MOSFET works? Here are some quick tutorials to get you up to speed:
+
+* [Intro to MOSFETs](https://www.circuitbread.com/tutorials/how-a-mosfet-works-at-the-semiconductor-level) — Basics of how MOSFETs function.
+
+* [NMOS vs PMOS Comparison](https://www.circuitbread.com/tutorials/nmos-vs-pmos-and-enhancement-vs-depletion-mode-mosfets) — The two types of MOSFETs and how they differ.
+
+
+<img src=https://github.com/user-attachments/assets/73a29fba-a0a5-47a8-80f1-7e0a0579ec56 width=500>
+
+---
+
+### 🧠 Boolean Logic
+
+Once you’ve got a grip on individual logic gates, the next step is learning how to represent and simplify more complex logic using Boolean algebra. This helps make your circuits cleaner, faster, and more efficient.
+
+- **[Boolean Algebra & Laws](https://www.geeksforgeeks.org/boolean-algebra/)**  
+  Learn the core rules and operations (like AND, OR, NOT) that help describe and manipulate logic expressions. These laws form the foundation for all logic simplification.
+  
+  📼 *Videos 35, 37*
+
+  ![image](https://github.com/user-attachments/assets/01b43256-33b2-4dae-ad83-2342e5fabe85)
+
+
+- **[SOP](https://www.geeksforgeeks.org/what-is-sum-of-product-sop-form/) | [POS](https://www.geeksforgeeks.org/what-is-product-of-sum-pos-form/)**  
+  When writing Boolean expressions, there are two common formats — Sum of Products (SOP) and Product of Sums (POS). In SOP, you combine multiple ANDed terms using OR, while POS does the opposite by combining ORed terms using AND. These formats aren’t just theoretical — they’re incredibly useful when designing actual logic circuits, especially when it comes to optimization and simplification later using tools like K-Maps.
+  
+  📼 *Video 53*
+
+- **[K-Maps & Minimization](https://www.geeksforgeeks.org/k-mapkarnaugh-map/)**  
+  Karnaugh Maps (or K-Maps) are like cheat sheets for simplifying Boolean expressions. Instead of writing out a truth table and using algebra, you just group 1s or 0s on a grid. It’s a visual method that quickly helps reduce logic circuits into simpler versions with fewer gates.
+Once you get used to it, this becomes your go-to technique when circuits start looking messy or redundant.
+
+  📼 *Videos 57–61*
+
+  ![image](https://github.com/user-attachments/assets/4ca49040-dd03-4917-b03b-c5083ecb6a0c)
+
+
+- **[Don't Care Conditions](https://www.geeksforgeeks.org/dont-care-x-conditions-in-k-maps/)**  
+  Sometimes, certain input combinations are either invalid or won’t occur in a real-world use case. These are called “don’t care” conditions, and they’re marked as 'X' in K-Maps.
+The cool part? You can use these Xs however you want — either as 1 or 0 — to help you create larger groups and simplify your expressions even more.
+
+  📼 *Video 62*
+
+- **[Quine-McCluskey (Optional)](https://www.geeksforgeeks.org/quine-mccluskey-method/)**  
+  Think of this as a more systematic, step-by-step way of minimizing Boolean expressions — perfect for writing logic simplification algorithms that computers can use.
+While it’s not something you’ll always use by hand, knowing how it works helps when dealing with larger circuits where K-Maps get impractical. Great for those who want to dive deeper or are curious about how logic simplification is automated.
+
+---
+## ⚙️ Combinational Circuits
+
+
+Let’s level up our logic. Using our understanding of basic gates, we now start building more complex circuits — the kind that actually do stuff. Combinational circuits are the next step: they don’t use any memory, which means their output depends only on the current inputs, nothing more. In this section, we’ll explore how simple gates can be combined to form higher-level blocks like adders, multiplexers, and comparators — circuits capable of performing real calculations and decision-making. It’s like upgrading from individual Lego bricks to full structures.
+
+---
+
+#### ➕ Adders
+Okay, first up — let’s build circuits called adders.
+As we’ve learned about binary addition, it’s time to start building circuits that can actually add. Just imagine — a bunch of transistors, wired up and flowing with electricity, somehow doing math! They’re helping us add two numbers. Sure, it’s all in binary and we don’t get to see the satisfying decimal answers just yet… but don’t worry. With some more circuitry, it will all add up 😉.
+
+- **[Half Adder](https://www.geeksforgeeks.org/digital-electronics-half-adder/)**  
+  This is the most basic adder circuit — it takes in two single-bit binary inputs and gives you a sum and a carry. No carry-in here, just a simple intro to how logic gates can literally "add." It’s made using just an XOR and an AND gate. Pretty neat for something so simple.
+
+  ![image](https://github.com/user-attachments/assets/589f6396-5fe4-4e8d-bb19-6fb08ad90f60)
+
+
+- **[Full Adder](https://www.geeksforgeeks.org/full-adder-digital-electronics/)**  
+  The full adder builds on the half adder and adds one more input: the carry-in. So now it can actually be used to add multi-bit numbers by chaining multiple full adders. This one’s essential for any real arithmetic in digital systems.
+
+  <img src=https://github.com/user-attachments/assets/c96d4ca6-4d3a-4d14-a530-bfe65238bd87 width=500>
+  
+
+- **[Ripple Carry Adder](https://www.geeksforgeeks.org/parallel-adder-and-parallel-subtractor/)**  
+Now that we’ve got full adders, we can connect them in series to add multi-bit binary numbers. That’s exactly what the ripple carry adder does. Each full adder handles a bit of the numbers and passes its carry to the next. It’s simple and easy to build — but as the name suggests, the carry "ripples" through each stage, which slows things down when dealing with lots of bits. Great for learning, not ideal for speed.
+
+![image](https://github.com/user-attachments/assets/b58ab830-079b-4b13-96a9-5240f0694db4)
+
+
+- **[Carry Look Ahead Adder](https://www.geeksforgeeks.org/digital-logic-carry-look-ahead-adder/)**  
+  To fix the delay caused by ripple carry, we use a smarter design — the carry look ahead adder. Instead of waiting for the carry to travel through each adder, this circuit predicts it using logic based on the input bits. It uses the concepts of generate and propagate to compute all carries in parallel. That makes it way faster and far more efficient, especially in real-world CPUs. It’s a great example of how we trade off complexity for performance in circuit design.
+
+  📼 *Videos 67–71*
+
+  ![image](https://github.com/user-attachments/assets/e88bf9ff-f5e1-46cd-9343-42f16843876d)
+
+
+- **[BCD Adder (Optional)](https://www.geeksforgeeks.org/digital-electronics-bcd-adder/)** | [📺 Video](https://www.youtube.com/watch?v=ss9FpyRgIjw)  
+  Remember BCD? (Yeah, the one where we awkwardly fit decimal digits into 4-bit binary.) Now let’s try designing an adder that can handle numbers in that exact format. It’s a bit different from normal binary addition, but super useful in things like calculators and digital clocks where we actually care about decimal digits.
+
+
+---
+
+#### ✖️ Multipliers
+
+Alright — we’ve tackled addition, so next up is multiplication. Sounds straightforward, right? And yeah, conceptually it is: multiplying binary numbers is just repeated addition. But when it comes to the actual circuits... yeah, they can look pretty scary at first glance 😵‍💫.
+
+But don’t worry — the core idea is still simple, and once you break it down, it's totally manageable. The videos do a great job walking through it, and I really recommend grabbing a pen and actually drawing out the circuit step by step. You’ll appreciate how the logic unfolds bit by bit(yep, pun intended 😏).  
+
+📼 *Video 75 (Signed → 76 (signed multiplication is optional)*  
+
+
+<img src=https://github.com/user-attachments/assets/5ef2828b-f642-451c-8b94-610366fd9246 width=600>
+
+
+![image](https://github.com/user-attachments/assets/24118f79-99b2-47d8-b1a8-9f0d24eb45ad)
+
+  
+##### *P.S. Don’t worry — once you learn a bit about sequential circuits, we’ll be able to build a much more efficient (and slightly smaller!) circuit for binary multiplication*
+---
+
+#### 🔁 Comparator
+
+- **[Magnitude Comparator](https://www.geeksforgeeks.org/magnitude-comparator-in-digital-logic/)**  
+  Compares two binary numbers and tells you which one’s bigger, smaller, or if they’re equal.  
+  📼 *Video 78*
+
+---
+
+#### 🎛️ MUX, DEMUX, Encoders & Decoders
+
+These are control circuits — they don’t calculate, but they help decide what signals go where.
+
+- **[Multiplexers & Demux](https://www.elprocus.com/what-is-multiplexer-and-demultiplexer-types-and-differences/)**  
+  A MUX selects one input and forwards it to the output. DEMUX does the reverse — one input, many outputs.
+
+- **[Encoders & Decoders](https://www.geeksforgeeks.org/digital-logic-encoders-decoders/)**  
+  Encoders convert active inputs into coded output. Decoders do the reverse. Think of them like digital translators.
+
+  📼 *Videos 79–90* (skip 85)
+
+---
+
+
 
 
