@@ -214,7 +214,7 @@ Let’s level up our logic. Using our understanding of basic gates, we now start
 
 ---
 
-#### ➕ Adders
+### ➕ Adders
 Okay, first up — let’s build circuits called adders.
 As we’ve learned about binary addition, it’s time to start building circuits that can actually add. Just imagine — a bunch of transistors, wired up and flowing with electricity, somehow doing math! They’re helping us add two numbers. Sure, it’s all in binary and we don’t get to see the satisfying decimal answers just yet… but don’t worry. With some more circuitry, it will all add up 😉.
 
@@ -250,7 +250,7 @@ Now that we’ve got full adders, we can connect them in series to add multi-bit
 
 ---
 
-#### ✖️ Multipliers
+### ✖️ Multipliers
 
 Alright — we’ve tackled addition, so next up is multiplication. Sounds straightforward, right? And yeah, conceptually it is: multiplying binary numbers is just repeated addition. But when it comes to the actual circuits... yeah, they can look pretty scary at first glance 😵‍💫.
 
@@ -268,28 +268,100 @@ But don’t worry — the core idea is still simple, and once you break it down,
 ##### *P.S. Don’t worry — once you learn a bit about sequential circuits, we’ll be able to build a much more efficient (and slightly smaller!) circuit for binary multiplication*
 ---
 
-#### 🔁 Comparator
+#### ➖ Subtractors & Dividers
+We’ve done addition and multiplication — so why stop there? Let’s cover the full set of basic operations. Subtractors and dividers aren’t always covered in depth, but they’re definitely worth checking out if you're curious about how binary subtraction and division work in hardware. Not strictly necessary, but definitely a fun dive!
+- [Subtractor](https://www.geeksforgeeks.org/digital-logic/full-subtractor-in-digital-logic/)
+- Divider (Sorry we dont have a reading resource for this)
+  
+📼 *Video 75, 85* 
 
-- **[Magnitude Comparator](https://www.geeksforgeeks.org/magnitude-comparator-in-digital-logic/)**  
-  Compares two binary numbers and tells you which one’s bigger, smaller, or if they’re equal.  
+
+---
+
+### 🔁 Comparator
+Alright — we’ve done addition, subtraction, and multiplication. Now let’s look at something a bit different: comparison. Sometimes you don’t want to calculate a value, you just want to know which number is bigger. That’s where comparators come in. A magnitude comparator takes in two binary numbers and tells you if one’s greater than, less than, or equal to the other. Pretty straightforward, but super important in decision-making circuits.  
+
+**[Read More Here](https://www.geeksforgeeks.org/magnitude-comparator-in-digital-logic/)**  
   📼 *Video 78*
 
 ---
 
-#### 🎛️ MUX, DEMUX, Encoders & Decoders
+### 🎛️ MUX, DEMUX, Encoders & Decoders
 
-These are control circuits — they don’t calculate, but they help decide what signals go where.
+Now let’s look at some basic but powerful logic circuits that act more like managers than calculators. These circuits don’t directly compute values, but they control how data flows in more complex systems. Whether it’s selecting inputs, routing outputs, or translating data formats, these blocks play a huge role in organizing and directing the logic inside a digital system. You'll see them pop up all over the place later on, so it's worth getting comfortable with them now.
 
 - **[Multiplexers & Demux](https://www.elprocus.com/what-is-multiplexer-and-demultiplexer-types-and-differences/)**  
-  A MUX selects one input and forwards it to the output. DEMUX does the reverse — one input, many outputs.
+  Now let’s look at some logic circuits that aren’t doing calculations themselves, but are super useful for controlling where data goes. These are things like MUX, DEMUX, encoders, and decoders — they help manage inputs and outputs in bigger systems, and you’ll see them show up a lot as we go forward.  
+
+
+  ![image](https://github.com/user-attachments/assets/377bffd1-06ee-43ac-ac8b-3725c237fea0) ![image](https://github.com/user-attachments/assets/e5106223-4df7-4eaf-9408-55946d3ac77d)
+
+
 
 - **[Encoders & Decoders](https://www.geeksforgeeks.org/digital-logic-encoders-decoders/)**  
-  Encoders convert active inputs into coded output. Decoders do the reverse. Think of them like digital translators.
+  Now let’s look at encoders and decoders — circuits that don’t really compute anything but are super useful when you need to convert data from one format to another. An encoder takes multiple inputs and compresses them into a smaller set of outputs, while a decoder does the opposite — it expands coded data into a more readable form. You'll see these often when dealing with memory, displays, or instruction sets.  
 
+![image](https://github.com/user-attachments/assets/e6a762f1-a9c8-4ff4-9f15-4b4e25907112)
+
+   
   📼 *Videos 79–90* (skip 85)
 
 ---
+## ⏱️ Sequential Circuits
+Until now, we’ve explored combinational circuits — where outputs depend only on the current inputs. But real-world tasks often need memory. Think about it: in many everyday tasks, each step depends on what happened just before. You can’t always make decisions based only on the present; sometimes the past matters too. That’s where sequential circuits come in. These circuits have a memory element, meaning their output depends on both current inputs and past states. Pretty cool, right? Let’s dive in!    
+
+- [Intro to Sequential Circuits](https://www.geeksforgeeks.org/introduction-of-sequential-circuits/)
+  
+![image](https://github.com/user-attachments/assets/1710dfbd-31d4-4673-afed-03ddc86e6112)  
+  📼 *Video 91*
+
+---
+
+### Latches and FlipFlops
+First things first — you might be wondering, how do we even store data? How can a digital circuit remember anything?
+Surprisingly, with just a clever arrangement of the basic logic gates we already know, it’s possible to build a circuit that holds on to its previous value. That’s the most fundamental unit of memory in digital electronics — the latch.
+
+And when we make a few improvements to handle timing more reliably, we get the flip-flop — a more stable and practical memory element.
+
+With just these two basic building blocks, we can create all sorts of memory-based circuits. So let’s dive in and see how they work!
+
+- [Latches](https://www.geeksforgeeks.org/latches-in-digital-logic/) – These are the simplest memory elements in digital electronics that can store a single bit of data by feeding the output back into the input using logic gates.
+
+![image](https://github.com/user-attachments/assets/ba2e0825-3069-4aa6-a74f-1cfbd4fb83d9)  
+
+  
+- [Flip-Flops](https://www.geeksforgeeks.org/flip-flop-types-their-conversion-and-applications/)– These are clock-controlled memory elements that store one bit of data and are more stable and reliable than latches, making them the building blocks of most sequential circuits.
+
+  
 
 
+- [Master-Slave Flip-Flop](https://www.geeksforgeeks.org/master-slave-jk-flip-flop/) – a setup where two flip-flops are connected in series: the master captures input when the clock is low, and the slave updates the output when the clock goes high. This separation helps eliminate glitches and ensures clean, synchronized output transitions.
 
 
+<img src=https://github.com/user-attachments/assets/9dbd7ada-1089-4642-abcd-12ca602b85e9 width=600>
+
+  📼 *Videos 92–117*
+  
+---
+### Registers 
+
+Okay, storing a single bit is cool and all — but let’s be real, that’s not going to take us very far. What we really want is to store multiple bits, and that’s exactly what registers are for.
+
+At their core, registers are just a bunch of flip-flops lined up next to each other, working together. Depending on how we connect them, we get different types of registers like PIPO, PISO, SISO, SIPO, and the universal register.
+
+Sounds a bit confusing? Don’t worry — it’s not as bad as it seems. Here's a quick breakdown:
+
+- **P/S** stands for **Parallel/Serial** — parallel means all bits move at once, serial means one at a time.
+
+- **I/O** just means **Input/Output**.
+
+- And a **universal register** is like an all-rounder — it can handle everything.
+
+With just this info, you can actually try building a simple register yourself! But if you want to understand it properly, here’s a solid resource:  
+
+* [Register Circuits (PIPO, SISO, etc.)](https://www.geeksforgeeks.org/shift-registers-in-digital-logic/)
+
+![image](https://github.com/user-attachments/assets/d441136a-6c19-4b48-bcb3-fec8cb4fc670)
+
+
+  📼 *Videos 119–124*
