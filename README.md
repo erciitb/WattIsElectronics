@@ -72,10 +72,11 @@ Digital electronics is the part of electronics that deals with systems using dig
 Why just two values? Because it makes things much more reliable. Unlike analog signals that can be messy and affected by noise, digital signals are clear and easy to work with — which is why almost all modern devices like phones, laptops, and calculators are built using them.
 
 <img src=https://github.com/user-attachments/assets/b77cbf50-43d1-49eb-8a9c-633b0961bda1 width=500>
-
+  
+📼  *Video 1 in the playlist*
 ---
 
-## The Language of Digital Electronics: Binary
+## 1. The Language of Digital Electronics: Binary
 In digital electronics, everything comes down to 0s and 1s — they represent the low and high signals in a circuit. That’s why it’s important to understand the binary number system early on. Computers and digital devices store and handle all kinds of data — numbers, text, images — using just these two values. So, if you want to really get how digital systems work, binary is where it all begins.
 
 ![image](https://github.com/user-attachments/assets/5fbae6f6-dfb4-465f-9f00-85947e1ce293)
@@ -128,7 +129,7 @@ Want to go a bit deeper or explore some bonus topics? These are not mandatory, b
 
 ---
 
-## ⚙️ Intro to Logic Gates & Boolean Algebra
+## 2. ⚙️ Intro to Logic Gates & Boolean Algebra
 
 Let’s start with the real basics of digital electronics **— logic gates**.
 
@@ -207,7 +208,7 @@ The cool part? You can use these Xs however you want — either as 1 or 0 — to
 While it’s not something you’ll always use by hand, knowing how it works helps when dealing with larger circuits where K-Maps get impractical. Great for those who want to dive deeper or are curious about how logic simplification is automated.
 
 ---
-## ⚙️ Combinational Circuits
+## 3.  ⚙️ Combinational Circuits
 
 
 Let’s level up our logic. Using our understanding of basic gates, we now start building more complex circuits — the kind that actually do stuff. Combinational circuits are the next step: they don’t use any memory, which means their output depends only on the current inputs, nothing more. In this section, we’ll explore how simple gates can be combined to form higher-level blocks like adders, multiplexers, and comparators — circuits capable of performing real calculations and decision-making. It’s like upgrading from individual Lego bricks to full structures.
@@ -259,11 +260,7 @@ But don’t worry — the core idea is still simple, and once you break it down,
 📼 *Video 75 (Signed → 76 (signed multiplication is optional)*  
 
 
-<img src=https://github.com/user-attachments/assets/5ef2828b-f642-451c-8b94-610366fd9246 width=600>
-
-
-![image](https://github.com/user-attachments/assets/24118f79-99b2-47d8-b1a8-9f0d24eb45ad)
-
+<img src=https://github.com/user-attachments/assets/5ef2828b-f642-451c-8b94-610366fd9246 height=500>   <img src=https://github.com/user-attachments/assets/24118f79-99b2-47d8-b1a8-9f0d24eb45ad height=500>
   
 ##### *P.S. Don’t worry — once you learn a bit about sequential circuits, we’ll be able to build a much more efficient (and slightly smaller!) circuit for binary multiplication*
 ---
@@ -294,8 +291,7 @@ Now let’s look at some basic but powerful logic circuits that act more like ma
   Now let’s look at some logic circuits that aren’t doing calculations themselves, but are super useful for controlling where data goes. These are things like MUX, DEMUX, encoders, and decoders — they help manage inputs and outputs in bigger systems, and you’ll see them show up a lot as we go forward.  
 
 
-  ![image](https://github.com/user-attachments/assets/377bffd1-06ee-43ac-ac8b-3725c237fea0) ![image](https://github.com/user-attachments/assets/e5106223-4df7-4eaf-9408-55946d3ac77d)
-
+<img src=https://github.com/user-attachments/assets/377bffd1-06ee-43ac-ac8b-3725c237fea0 height=350>   <img src=https://github.com/user-attachments/assets/e5106223-4df7-4eaf-9408-55946d3ac77d height=350>
 
 
 - **[Encoders & Decoders](https://www.geeksforgeeks.org/digital-logic-encoders-decoders/)**  
@@ -307,7 +303,7 @@ Now let’s look at some basic but powerful logic circuits that act more like ma
   📼 *Videos 79–90* (skip 85)
 
 ---
-## ⏱️ Sequential Circuits
+## 4. ⏱️ Sequential Circuits
 Until now, we’ve explored combinational circuits — where outputs depend only on the current inputs. But real-world tasks often need memory. Think about it: in many everyday tasks, each step depends on what happened just before. You can’t always make decisions based only on the present; sometimes the past matters too. That’s where sequential circuits come in. These circuits have a memory element, meaning their output depends on both current inputs and past states. Pretty cool, right? Let’s dive in!    
 
 - [Intro to Sequential Circuits](https://www.geeksforgeeks.org/introduction-of-sequential-circuits/)
@@ -365,3 +361,41 @@ With just this info, you can actually try building a simple register yourself! B
 
 
   📼 *Videos 119–124*
+
+---
+
+### ⏲️ Synchronous vs Asynchronous
+
+While exploring sequential circuits, you might’ve noticed that most of them rely on something called a clock — a timing signal that tells the circuit when to do things. Based on how this clock is used, we classify sequential circuits into two types: synchronous and asynchronous.
+
+In synchronous circuits, all components work in sync with a single, global clock. Every operation happens only when that clock ticks — making the behavior predictable and easier to design and debug.
+
+In asynchronous circuits, there's no global clock. Circuits operate as soon as inputs arrive, meaning outputs might appear at different times. This makes them faster, but also trickier to design and more prone to glitches or timing errors.
+
+Here’s a bit more if you want to dive into the details:
+- [Synchronous Circuits](https://www.geeksforgeeks.org/synchronous-sequential-circuits-in-digital-logic/)
+- [Asynchronous Circuits](https://www.geeksforgeeks.org/asynchronous-sequential-circuits/)
+
+---
+### 🧮 Counters
+Let’s look at a super important use case of sequential circuits — counters. These circuits keep track of the number of clock pulses and are used pretty much everywhere: timers, clocks, memory, and even state machines. It’s also a great example to understand the difference between synchronous and asynchronous designs in action. Let’s break it down.
+- [Overview](https://www.geeksforgeeks.org/counters-in-digital-logic/)  
+ Counters are circuits that count clock pulses. Sounds simple, right? But they’re actually super useful in everything from timers to memory addressing. Think of them like digital tally marks that increase with every clock tick.
+- [Ripple Counters](https://www.geeksforgeeks.org/ripple-counter-in-digital-logic/)  
+  This is the simplest form of a counter and an example of an asynchronous counter. The flip-flops don’t all get the clock at the same time — instead, the output of one becomes the clock for the next. This creates a ripple effect (hence the name), which makes them easier to build but slower and prone to glitches due to the delay.
+
+
+<img src=https://github.com/user-attachments/assets/d7d75e05-9dc8-4cb9-a2ed-573dd0fd16aa height=300>
+
+  
+- [Ring & Johnson Counters](https://www.geeksforgeeks.org/n-bit-johnson-counter-in-digital-logic/)  
+  These are examples of synchronous counters, where all flip-flops receive the same clock signal. Ring counters circulate a single '1' (or '0') around, and Johnson counters are a modified version that doubles the number of states by feeding the inverted output back. They’re more stable and predictable — great for specific sequencing tasks.
+
+![image](https://github.com/user-attachments/assets/87aacf81-42ca-496d-9440-3d21548d6d5b)
+
+
+  
+- [Sequence Design](https://www.geeksforgeeks.org/design-counter-given-sequence/)  
+  Sometimes we want counters to follow a custom pattern — say 0 → 3 → 5 → 2 → 7. That’s where sequence design comes in. You’ll learn to design state diagrams and choose the right flip-flops to build exactly the sequence you want. It’s a good test of your understanding of everything you’ve learned so far!
+
+
