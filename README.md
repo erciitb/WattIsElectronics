@@ -398,4 +398,141 @@ Let’s look at a super important use case of sequential circuits — counters. 
 - [Sequence Design](https://www.geeksforgeeks.org/design-counter-given-sequence/)  
   Sometimes we want counters to follow a custom pattern — say 0 → 3 → 5 → 2 → 7. That’s where sequence design comes in. You’ll learn to design state diagrams and choose the right flip-flops to build exactly the sequence you want. It’s a good test of your understanding of everything you’ve learned so far!
 
+---
+## 5. 🧠 Finite State Machines
+Okay, we’ve looked at all sorts of logic circuits — but now we want to go one step further. We want to build circuits that actually do something we want, like follow a set of rules or perform a specific task. But where do we even start? How do we take a process that exists in our head and turn it into a working logic circuit?
 
+That’s where Finite State Machines (FSMs) come in. They're a super useful concept that help us bridge the gap between an abstract idea and a real digital circuit. Think of FSMs as a blueprint for behavior — if you can take any process or logic you’re imagining and express it as an FSM, turning it into a digital circuit becomes surprisingly straightforward. 
+
+In a Finite State Machine, as the name suggests, there are a finite number of states. The machine moves between these states based on the input it receives — but how exactly it gives output depends on the type of FSM you're using.
+* **Mealy FSM:**  
+In this type, the output depends on both the current state and the input. That means the machine can respond faster to inputs since the output can change as soon as the input changes.
+
+![alt text](image-1.png)
+
+* **Moore FSM:**  
+Here, the output depends only on the current state. So even if the input changes, the output won’t change until the FSM transitions to a different state. It’s a bit slower to react, but often simpler to design and debug.
+
+![alt text](image-2.png)
+
+- 📄 [Understanding Finite State Machines](./resources/Intro_to_FSM.pdf)  
+
+![alt text](image.png)
+  
+    
+
+Lets look at a simple and the most widely used example of an FSM
+- 📄 [FSM – Vending Machine](./resources/Vending_Machine_FSM.pdf)  
+![alt text](image-3.png)
+
+📼 *Videos 187–202* (skip 188)
+
+---
+
+#### Some Extra stuff
+These are more compact and efficient versions of some combinational circuits we explored earlier. They’re optional, but good to know!
+- [Serial Binary Adder](https://www.geeksforgeeks.org/serial-binary-adder-in-digital-logic/)
+- [Sequential Binary Multiplier](https://www.geeksforgeeks.org/sequential-binary-multiplier/)  
+📼 *Videos 203–205*
+
+---
+
+##   🔌 Analog Circuits
+Now that we’ve looked at digital circuits, let’s take a moment to explore the world of analog circuits and understand how they work.
+Yes, modern tech is mostly built around digital systems — but that doesn’t mean analog circuits are useless. In fact, they’re everywhere! While your CPU might be fully digital, things like touchscreen sensors, audio input/output, battery charging, power management, camera modules, and signal modulation still rely heavily on analog circuitry.
+
+So to really make the most of technology, we need to understand and use both analog and digital circuits together.
+
+I'm going to assume you already have some basic knowledge of common circuit components — like resistors, capacitors, and inductors — from high school physics. Also, a basic understanding of how a BJT (Bipolar Junction Transistor) works will be really helpful. If you’re feeling a bit rusty on any of these, I highly recommend brushing up, since these are the core elements we’ll be working with in analog circuits.
+
+---
+## 6. Analog Building Block: Op-Amps
+Op-Amps (Operational Amplifiers) are among the most fundamental and powerful building blocks in analog electronics. These little devices can amplify tiny signals, filter out noise, compare voltages, and even perform mathematical operations like addition and integration — all using just a few external components. You’ll find them everywhere: in sensor circuits, audio systems, analog-to-digital converters, and power management systems. Once you understand how Op-Amps work, you unlock the ability to design a wide range of analog circuits.
+
+
+
+![alt text](image-4.png)    
+  
+
+[🔗 Op-Amp Fundamentals & Essential Circuits](https://www.tutorialspoint.com/linear_integrated_circuits_applications/linear_integrated_circuits_applications_basics_of_operational_amplifier.htm)  
+This is  a solid reading resource that explains the basics of Op-Amps along with all the important configurations you should  know. I suggest going through it at least till the comparator section, which includes the core topics like inverting, non-inverting, summing, difference, voltage-to-current, current-to-voltage, differentiator, and integrator. These are all fundamental to analog circuit design.  
+
+▶️ [Op-Amp Video Playlist](https://youtube.com/playlist?list=PLwjK_iyK4LLDBB1E9MFbxGCEnmMMOAXOH)  
+This is a YouTube playlist that will arm you with everything you need to know about Op-Amps — from the basics to practical applications. Super useful if you prefer learning by watching.  
+
+---
+## 7. ADC / DAC 101
+Now, if we’re using both analog and digital circuits together, we obviously need a way for them to talk to each other. That’s where signal conversion comes in. To convert analog signals into digital (so digital circuits can understand them), we use an Analog to Digital Converter (ADC). And to go the other way — digital signals back into analog — we use a Digital to Analog Converter (DAC).
+
+These two are super important bridges between the analog and digital worlds.  
+
+---
+
+### **Digital to Analog Converters (DAC)**
+DACs are circuits that take binary input and convert it into a corresponding analog voltage signal.
+
+There are mainly two common types we’ll look at:  
+- **🪵 Binary Weighted Resistor DAC**  
+Each bit is connected to a resistor weighted based on its position — higher bits get smaller resistors and contribute more to the output. Simple to understand, but not super practical for large bit sizes since it needs very precise resistor values.  
+<img src=image-6.png height=400 >
+- **🪜 R–2R Ladder DAC**  
+This one just uses two resistor values: R and 2R. The resistors are arranged like a ladder and give accurate output while being way easier to build and scale. Much more practical for real-world applications.  
+<img src=image-5.png height=400 >  
+
+---
+### **Analog to Digital Circuits (ADC)**
+ADCs do the opposite of DACs — they take an analog voltage and convert it into a binary number that a digital system can understand.
+
+Let’s look at some common types of ADCs, each with its own way of approaching the problem:
+
+- **🧮 Counter-Type ADC**  
+This one starts at zero and counts up until the DAC output matches the input analog voltage. It’s simple but slow — has to go through all values one by one.  
+![alt text](image-7.png)
+
+- **🎯 Successive Approximation ADC**  
+A much smarter approach — it guesses the binary number bit by bit, starting from the MSB. Fast and commonly used in microcontrollers because of its efficiency.  
+![alt text](image-8.png)
+
+- **⚡ Flash ADC**  
+The fastest of them all — it uses a ton of comparators to instantly determine the binary output. Super fast, but also takes up a lot of space and power. Used when speed really matters (like high-speed video or data).  
+<img src=image-9.png height=600px>  
+
+- **🐢 Dual Slope ADC**
+It integrates the input over time and compares it with a reference. Very accurate and stable, especially useful in digital multimeters. Not fast, but super reliable.  
+![alt text](image-10.png)
+    
+---
+
+That was just a quick preview — here are some solid resources to fully understand how ADCs and DACs work:  
+
+[📄 Understanding ADCs & DACs](https://www.ee.iitb.ac.in/~sequel/ee101/ee101_dac_1.pdf)  
+Here are some lecture slides that clearly explain the different types of ADCs and DACs, and how each of them works.  
+
+
+
+[🎥 Complete Guide to ADCs & DACs](https://youtube.com/playlist?list=PLwjK_iyK4LLCnW-df-_53d-6yYrGb9zZc&si=rnaJttZ3t-601D9t)  
+This playlist covers everything you need to know about converting between analog and digital signals. It walks you through the working of various ADCs (like successive approximation, flash, dual slope) and DACs (like R-2R ladder and weighted resistor). This is definitely something you’ll want to check out.
+
+---
+
+## 8. The 555 Timer IC
+Now let’s look at a very famous IC that’s widely used across tons of circuits — the 555 Timer IC. What’s cool is that it combines both digital and analog elements, and it’s mainly used to generate precise timing signals. From blinking LEDs to PWM control and delay circuits, its applications are endless. Let’s dive in and see what makes this chip so iconic.
+
+![alt text](image-11.png)
+
+ **THE INTERNAL CIRCUIT OF 555 TIMER IC**
+
+ ![alt text](image-12.png)
+
+
+
+The 555 Timer is a widely used IC that cleverly combines analog and digital components — like two comparators, a flip-flop, and a discharge transistor — into one compact chip. It’s designed to generate accurate time delays or oscillations using just a few external components.
+
+At the heart of its timing mechanism is a capacitor. The idea is simple but powerful: capacitors charge and discharge at a predictable rate depending on the surrounding resistor values. The internal comparators in the 555 monitor the voltage across this capacitor. When the voltage crosses certain thresholds (typically 1/3 and 2/3 of the supply voltage), they trigger the flip-flop to change the output state and optionally discharge the capacitor via an internal transistor.
+
+This clever cycle of charging and discharging allows the 555 Timer to act in different modes — monostable (one-shot pulse), astable (square wave generator), or bistable (flip-flop behavior). It’s incredibly versatile and still used in all kinds of circuits, from blinkers to audio tones to sensor triggers.
+
+If you want a visual breakdown of how it all works and its basic applications, check out this Videos 10-13 of this handy playlist:  
+[🎥 555 Timer IC — Explained & Applications](https://youtube.com/playlist?list=PLwjK_iyK4LLCVdgBR30pSFVj-17TI_8ou)  
+
+---
