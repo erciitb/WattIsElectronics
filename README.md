@@ -478,6 +478,7 @@ There are mainly two common types we’ll look at:
 - **🪵 Binary Weighted Resistor DAC**  
 Each bit is connected to a resistor weighted based on its position — higher bits get smaller resistors and contribute more to the output. Simple to understand, but not super practical for large bit sizes since it needs very precise resistor values.  
 <img src=images/image-6.png height=400 >
+
 - **🪜 R–2R Ladder DAC**  
 This one just uses two resistor values: R and 2R. The resistors are arranged like a ladder and give accurate output while being way easier to build and scale. Much more practical for real-world applications.  
 <img src=images/image-5.png height=400 >  
@@ -489,19 +490,23 @@ ADCs do the opposite of DACs — they take an analog voltage and convert it into
 Let’s look at some common types of ADCs, each with its own way of approaching the problem:
 
 - **🧮 Counter-Type ADC**  
-This one starts at zero and counts up until the DAC output matches the input analog voltage. It’s simple but slow — has to go through all values one by one.  
+This one starts at zero and counts up until the DAC output matches the input analog voltage. It’s simple but slow — has to go through all values one by one.
+
 ![alt text](images/image-7.png)
 
 - **🎯 Successive Approximation ADC**  
-A much smarter approach — it guesses the binary number bit by bit, starting from the MSB. Fast and commonly used in microcontrollers because of its efficiency.  
+A much smarter approach — it guesses the binary number bit by bit, starting from the MSB. Fast and commonly used in microcontrollers because of its efficiency.
+
 ![alt text](images/image-8.png)
 
 - **⚡ Flash ADC**  
-The fastest of them all — it uses a ton of comparators to instantly determine the binary output. Super fast, but also takes up a lot of space and power. Used when speed really matters (like high-speed video or data).  
+The fastest of them all — it uses a ton of comparators to instantly determine the binary output. Super fast, but also takes up a lot of space and power. Used when speed really matters (like high-speed video or data).
+
 <img src=images/image-9.png height=600px>  
 
 - **🐢 Dual Slope ADC**
-It integrates the input over time and compares it with a reference. Very accurate and stable, especially useful in digital multimeters. Not fast, but super reliable.  
+It integrates the input over time and compares it with a reference. Very accurate and stable, especially useful in digital multimeters. Not fast, but super reliable.
+
 ![alt text](images/image-10.png)
     
 ---
@@ -558,7 +563,7 @@ Here’s a quick overview of what PWM is and an intuition on how it works:
 Here are some more resources to help you understand PWM better:  
 - [📄 Reading Resource](https://www.geeksforgeeks.org/pulse-width-modulation-pwm/)
 
-- [📺 Video Explanation](ttps://www.youtube.com/watch?v=2XjqS1clY_E)
+- [📺 Video Explanation](https://www.youtube.com/watch?v=2XjqS1clY_E)
 
 Hmm yes, this is useful — but how do we even generate such accurate signals, you might be wondering?
 Turns out, it’s not that hard. If you remember the 555 timer configured as an astable multivibrator, it's pretty much the same circuit! Just swap out some of the resistors with a potentiometer, and voilà — you can control the duty cycle and get a precise PWM signal.  
