@@ -1,5 +1,5 @@
-# ER101
-## Hello everyone, and welcome to ER 101!
+# WattIsElectronics
+## Watt’s going on inside that circuit?”
 
 ![image](https://github.com/user-attachments/assets/a97bf91e-5eca-45b2-bf77-175d9c5d605e)
 
@@ -9,7 +9,7 @@ It almost feels like magic… but it’s not. It’s science — and humans figu
 
 So, where do you begin if you want to really understand how computers and electronics work? Right here.
 
-The Electronics and Robotics Club of IIT Bombay brings you ER 101 — a beginner-friendly roadmap to help you build a solid foundation in electronics and get a clear picture of how we use electricity to process information and build the tech around us.
+The Electronics and Robotics Club of IIT Bombay brings you **WattIsElectronics** — a beginner-friendly roadmap to help you build a solid foundation in electronics and get a clear picture of how we use electricity to process information and build the tech around us.
 
 ---
 
@@ -49,20 +49,6 @@ Here are some platforms where you can experiment and build your own circuits:
 
   ![image](https://github.com/user-attachments/assets/5833b72d-a727-44ca-935a-8a3a967e10a3)
 
-
----
-
-#### ⚙️ For Real-World Electronics & Arduino Simulation
-
-- 🔗 [**Wokwi**](https://wokwi.com)  
-  Wokwi is a powerful browser-based simulator for **Arduino**, ESP32, Raspberry Pi Pico, and more. It lets you build and test embedded systems with real-world components like sensors, displays, and microcontrollers — all without any hardware. Great for prototyping, debugging, or just learning how things work.
-
-  ![image](https://github.com/user-attachments/assets/e06be3d5-63db-407d-b07f-729bff8dd87c)
-
-- 🔗 [**TinkerCAD Circuits**](https://www.tinkercad.com/circuits)  
-  **TinkerCAD** Circuits is a beginner-friendly online tool that lets you simulate basic electronics and **Arduino** projects. It’s simple, intuitive, and great for quickly testing ideas or learning how circuits work — no hardware needed
-
-  ![image](https://github.com/user-attachments/assets/eeea2e30-1f66-4ef0-9b2f-f3c193326aa8)
 
 ---
 
@@ -570,13 +556,21 @@ Turns out, it’s not that hard. If you remember the 555 timer configured as an 
 [👉 Watch this tutorial on building a 555 PWM circuit](https://www.youtube.com/watch?v=x4RmIzUd2lk)— and I suggest you try building this circuit in an online simulator too!
 
 ---
-**🎉 YAYY! You made it through the basics of electronics!**  
-Now we can finally move forward to understanding mini computers — yep, I’m talking about microcontrollers. You’ve built a pretty solid foundation in all the core concepts.
+**🎉 YAYY! You made it through the basics of electronics!** 
 
-Sure, the first part was a bit theory-heavy... but don’t worry — from here on out, as we dive into microcontrollers (especially with something like the Arduino board), everything becomes way more hands-on and practical.
-No more just reading — now you’ll build, code, and create.
+![alt text](images/image-28.png)
 
-Let’s keep the momentum going and start learning microcontrollers 🚀
+From understanding voltages and resistors to decoding logic gates and flip-flops—you’ve built a solid foundation in electronics. It might’ve felt a bit theory-heavy at times, but that’s what makes what’s coming next even more exciting.
+
+Now that you know the “why” behind the circuits, it’s time to discover the “how” — and that’s where microcontrollers come in.
+
+Want to go beyond just learning and actually start building?
+Check out the next part of your journey:
+[👉 Microcontrollers & Embedded Systems Repo](https://github.com/Jadeninja-23a/MicrocontrollersAndMore/tree/main)
+
+Let your curiosity flow. Stay grounded, stay charged. ⚡
+
+
 
 ---
 
