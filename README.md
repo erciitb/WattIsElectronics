@@ -565,7 +565,7 @@ From understanding voltages and resistors to decoding logic gates and flip-flops
 Now that you know the “why” behind the circuits, it’s time to discover the “how” — and that’s where microcontrollers come in.
 
 Want to go beyond just learning and actually start building?
-Check out the next part of your journey:
+Check out the next part of your journey:  
 [👉 Microcontrollers & Embedded Systems Repo](https://github.com/Jadeninja-23a/MicrocontrollersAndMore/tree/main)
 
 Let your curiosity flow. Stay grounded, stay charged. ⚡
