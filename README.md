@@ -566,7 +566,7 @@ Now that you know the “why” behind the circuits, it’s time to discover the
 
 Want to go beyond just learning and actually start building?
 Check out the next part of your journey:  
-[👉 Microcontrollers & Embedded Systems Repo](https://github.com/Jadeninja-23a/MicrocontrollersAndMore/tree/main)
+[👉 Microcontrollers & Embedded Systems Repo](https://github.com/Jadeninja-23a/MCU-MicroControllerUniverse)
 
 Let your curiosity flow. Stay grounded, stay charged. ⚡
 
