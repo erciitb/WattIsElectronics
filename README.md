@@ -1,4 +1,5 @@
 # WattIsElectronics
+*Author: **Videep Reddy Jalapally** | 2025*
 ## Watt’s going on inside that circuit?”
 
 ![image](https://github.com/user-attachments/assets/a97bf91e-5eca-45b2-bf77-175d9c5d605e)
